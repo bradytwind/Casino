@@ -1,5 +1,6 @@
 class Player
 
+attr_accessor :name :age :wallet_amount
  def initiatlize
    puts "Create a new Player"
    #setup instance varieable
