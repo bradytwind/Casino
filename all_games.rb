@@ -57,7 +57,8 @@ class RussianRoulette
 bullets = [1..6]
 
   def russian_roulette
-    puts "Welcome to Russian Roulette. The game of ultimate stakes"
+    puts "Welcome to Russian Roulette. The game of ultimate stakes.."
+    puts ""
   end
 end
 
