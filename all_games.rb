@@ -25,8 +25,8 @@ class Slots
   end
 end
 
-slot = Slots.new
-slot.slot_machine
+# slot = Slots.new
+# slot.slot_machine
 
 
 
