@@ -1,3 +1,4 @@
+#updating master
 #this pulls in the player class from the other file, not caps since its pulling the file itself
 #require_relative 'wallet' ??
 require_relative './player'
