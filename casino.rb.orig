@@ -46,10 +46,13 @@ main_menu = gets.chomp
 
 case main_menu
   when "1"
+<<<<<<< d665bf9e93381393d9827c1336a618bb56a730b3
     #option 1 slots
+    slot_machine()
+=======
     slot = Slots.new
     slot.slot_machine
-
+>>>>>>> Updated casino.rb
   when "2"
     #option 2 highlow
     highlow
@@ -57,8 +60,12 @@ case main_menu
     #option 3 russian roulette
     russian_roulette
   when "4"
+<<<<<<< d665bf9e93381393d9827c1336a618bb56a730b3
     #option 4 war
     War
+=======
+    #
+>>>>>>> Updated casino.rb
   when "5"
     puts "Thanks for playing, your total amount is #{@wallet.money}"
     exit 0
