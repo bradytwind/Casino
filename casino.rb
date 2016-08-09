@@ -22,7 +22,7 @@ casino = gets.chomp
 case casino
   when "1"
     #option 1 slots
-    slot_machine
+    slot_machine()
   when "2"
     #option 2 highlow
     highlow
