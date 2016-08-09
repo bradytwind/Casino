@@ -1,3 +1,4 @@
+
 class Slots
 @slots = [["Bar", "7", "Cherry"],
         ["7", "Cherry", "Bar"],
@@ -17,7 +18,9 @@ class Slots
           puts "Winner!"
         end
       when "2"
-        slot_machine
+        require_relative './casino'
+        intro = Intro.new
+        intro.casino_menu
       else
         puts "Invalid selection!"
         slot_machine
@@ -43,7 +46,9 @@ highlow = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'Ac
       when "1"
         puts highlow.sample
       when "2"
-        #take back to casino menu
+        require_relative './casino'
+        intro = Intro.new
+        intro.casino_menu
       else
         puts "Invalid entry, please enter 1 or 2"
         high_low
@@ -62,8 +67,9 @@ class War
         house1 = @genereate_deck
         player1 = @generate_deck
       when "2"
-        war_game
-        @casino
+        require_relative './casino'
+        intro = Intro.new
+        intro.casino_menu
       else
         puts "Invalid entry, please enter 1 or 2"
         exit (0)
@@ -74,7 +80,7 @@ end
 
 
 class RussianRoulette
-require_relative './casino'
+def initialize
 
 @bullets = ["1", "2", "3", "4", "5", "6"]
 
@@ -106,10 +112,13 @@ require_relative './casino'
           russian_roulette
         end
       when "2"
-        russian_roulette
+        require_relative './casino'
+        intro = Intro.new
+        intro.casino_menu
       else
         puts "Invalid entry, must enter 1 or 2"
         russian_roulette
     end
+  end
   end
 end

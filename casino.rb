@@ -2,8 +2,9 @@
 #require_relative 'wallet' ??
 require_relative './player'
 require_relative './all_games'
+
 class Intro
-  def initialize(intro)
+  def initialize
    @intro = intro
   end
 end
@@ -32,13 +33,18 @@ end
 
 casino
 
-puts "You're name is #{@player.name} and you have #{@wallet.money} in your wallet."
-puts "Please select 1 - 5 from our list of games"
-puts "1. Slots"
-puts "2. Hi-Lo"
-puts "3. War"
-puts "4. Russian roulette"
+
+def casino_menu
+  puts "You're name is #{@player.name} and you have #{@wallet.money} in your wallet."
+  puts "Please select 1 - 5 from our list of games"
+  puts "1. Slots"
+  puts "2. Hi-Lo"
+  puts "3. War"
+  puts "4. Russian roulette"
 puts "5. Exit the casino"
+end
+
+casino_menu
 
 main_menu = gets.chomp
 
@@ -55,10 +61,11 @@ case main_menu
     highlow
   when "3"
     #option 3 russian roulette
-    russian_roulette
+    war
   when "4"
     #option 4 war
-    War
+    rush = RussianRoulette.new
+    rush.russian_roulette
   when "5"
     puts "Thanks for playing, your total amount is #{@wallet.money}"
     exit 0
