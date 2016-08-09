@@ -101,7 +101,7 @@ require_relative './casino'
           sleep(2)
           exit (0)
         else
-          puts "...Click"
+          puts "...Click..."
           puts "Congratulations #{@name}, you won $X! To go again press 1. To leave press 2"
           russian_roulette
         end
