@@ -23,3 +23,4 @@ end
 
 # wallet1 = WalletAmount.new(100)
 # wallet1.money
+#
