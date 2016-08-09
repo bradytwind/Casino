@@ -17,10 +17,10 @@ class Slots
           puts "Winner!"
         end
       when "2"
-        #take back to casin menu
+        slot_machine
       else
         puts "Invalid selection!"
-        exit
+        slot_machine
     end
   end
 end
