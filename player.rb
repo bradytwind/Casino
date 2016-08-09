@@ -17,6 +17,7 @@ class WalletAmount
   end
 end
 
+
 # player1 = Player.new("Brady")
 # player1.name
 
