@@ -5,7 +5,7 @@
 class Casino
  #make sure you use attr_accessor
  attr_accessor :player
- def initiatlize
+ def initialize
    puts "Welcome to the Casino!"
    # For now, just one player
    # Should allow as many players
@@ -16,3 +16,21 @@ class Casino
 end
 
 Casino.new
+
+casino = gets.chomp
+
+case casino
+  when "1"
+    #option 1 slots
+  when "2"
+    #option 2 highlow
+  when "3"
+    #option 3 russian roulette
+  when "4"
+    #option 4 war
+  when "5"
+    puts "Thanks for playing, your total amount is #{amount}"
+    exit 0
+  else
+    puts "Invalid option, please select 1-5"
+end
