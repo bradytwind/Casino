@@ -1,5 +1,4 @@
 class Slots
-
 @slots = [["Bar", "7", "Cherry"],
         ["7", "Cherry", "Bar"],
         ["Cherry", "Bar", "7"]]
@@ -29,8 +28,9 @@ end
 slot = Slots.new
 slot.slot_machine
 
-class HighLow
 
+
+class HighLow
 highlow = [1..10]
 
   def high_low
@@ -54,9 +54,11 @@ end
 
 
 class RussianRoulette
+bullets = [1..6]
 
   def russian_roulette
-    puts "Welcome to Russian Roulette. The game with the highest"
+    puts "Welcome to Russian Roulette. The game of ultimate stakes.."
+    puts ""
   end
 end
 
@@ -64,4 +66,3 @@ end
 
 class War
 end
-Contact GitHub API Training Shop Blog About
