@@ -22,12 +22,16 @@ casino = gets.chomp
 case casino
   when "1"
     #option 1 slots
+    slot_machine
   when "2"
     #option 2 highlow
+    highlow
   when "3"
     #option 3 russian roulette
+    russian_roulette
   when "4"
     #option 4 war
+    War
   when "5"
     puts "Thanks for playing, your total amount is #{amount}"
     exit 0
