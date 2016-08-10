@@ -1,7 +1,8 @@
 class Player
-  attr_accessor :name
-  def initialize(name)
+  attr_accessor :name, :wallet
+  def initialize(name, wallet)
     @name = name
+    @wallet = Wallet.new(wallet)
     puts "Created a new Player #{@name}"
   #setup instance varieable
   #by getting user input
@@ -9,11 +10,11 @@ class Player
   end
 end
 
-class WalletAmount
-  attr_accessor :money
-  def initialize(money)
-    @money = money
-    puts "You have $#{@money} in your wallet!"
+class Wallet
+  attr_accessor :total
+  def initialize(total)
+    @total = total
+    puts "You have $#{@total} in your wallet!"
   end
 end
 
