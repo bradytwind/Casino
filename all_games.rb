@@ -152,6 +152,8 @@ class RussianRoulette
           sleep(1)
           puts "Worry not - as a token of good humanity, we will donate $10 to your family \nto help with this inconvenience."
           sleep(2)
+          puts "GAME OVER"
+          sleep(2)
           exit (0)
         else
           puts "...Click..."

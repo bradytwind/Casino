@@ -65,7 +65,7 @@ class Intro
         if money_check == "1" 
           casino_menu(@player)
         elsif money_check == "2"
-          puts "Thanks for playing!"
+          puts "Thanks for playing, you're leaving with $ #{@player.wallet.total}!"
           exit (0)
         else 
           puts "Invalid option, please select 1 or 2"
