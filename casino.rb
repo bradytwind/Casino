@@ -6,6 +6,7 @@ require_relative './all_games'
 
 class Intro
   def casino
+    puts ""
     puts "Welcome to the Casino!"
     puts "Please enter your name:"
     print "-->"
@@ -14,7 +15,8 @@ class Intro
       puts "Have a great day"
       exit 0
     else
-      puts "Please enter in the amount of money you brought with you"
+      puts "Please enter in the amount of money you brought with you:"
+      print "-->"
       wallet = gets.chomp.to_i
       
       # For now, just one player
@@ -43,21 +45,34 @@ class Intro
       when "1"
         slot = Slots.new(@player)
         slot.slot_machine
-
       when "2"
         hilo = HighLow.new(@player)
         hilo.high_low
       when "3"
-        wars = War.new(@player)
-        wars.war_game
+        puts "Currently under construction. Check back soon!"
+        sleep(2)
+        casino_menu(@player)
+        # wars = War.new(@player)
+        # wars.war_game
       when "4"
         rush = RussianRoulette.new(@player)
         rush.russian_roulette
       when "5"
-        puts "Wallet: $#{@player.wallet.total}"
-        casino_menu(@player)
+        puts "Your wallet has: $#{@player.wallet.total}"
+        puts "To keep going, press 1. To cut your losses and exit, press 2"
+        print "-->"
+        money_check = gets.chomp
+        if money_check == "1" 
+          casino_menu(@player)
+        elsif money_check == "2"
+          puts "Thanks for playing!"
+          exit (0)
+        else 
+          puts "Invalid option, please select 1 or 2"
+          casino_menu(@player)
+        end
       when '6'
-        puts "Thanks for playing, your total amount is ${@player.wallet.total}"
+        puts "Thanks for playing, you're leaving with $ #{@player.wallet.total}"
         exit 0
       else
         puts "Invalid option, please select 1-5"

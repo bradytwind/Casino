@@ -3,9 +3,7 @@ class Slots
 
   def initialize(player)
     @player = player
-    @slots = [["Bar", "7", "Cherry"],
-             ["7", "Cherry", "Bar"],
-             ["Cherry", "Bar", "7"]]
+    @slots = ["Bar", "7", "Cherry"]
   end
   
   def slot_machine
@@ -15,14 +13,28 @@ class Slots
     slot_pull = gets.chomp
     case slot_pull
       when "1"
-        puts @slots[0].sample
-        puts @slots[1].sample
-        puts @slots[2].sample
-        if @slots[0] == @slots[1] && @slots[1] == @slots[2]
-          puts "Winner!"
-        else 
-          puts "Sorry, try again!"
+        spin_result = Array.new
+
+        3.times do 
+          spin_result << @slots.sample
         end
+
+        puts spin_result[0]
+        sleep(1)
+        puts spin_result[1]
+        sleep(1)
+        puts spin_result[2]
+        sleep(1)
+
+          if spin_result[0] == spin_result[1] && spin_result[1] == spin_result[2]
+            puts "You win $2!"
+            @player.wallet.total = @player.wallet.total += 2
+            slot_machine
+          else
+            puts "You lose $2! Thanks for playing!"
+            @player.wallet.total = @player.wallet.total -= 2  
+            slot_machine
+          end
       when "2"
          intro = Intro.new
         
@@ -138,11 +150,12 @@ class RussianRoulette
           puts "Hmm. Looks like you died and lost all of your money. So sorry for your misfortune."
           puts ""
           sleep(1)
-          puts "Worry not - as a token of good humanity, we will donate $10 to your family \nto help with this inconvenience"
+          puts "Worry not - as a token of good humanity, we will donate $10 to your family \nto help with this inconvenience."
           sleep(2)
           exit (0)
         else
           puts "...Click..."
+          sleep(1)
           puts "Congratulations #{@player.name}, you won $10!"
           @player.wallet.total = @player.wallet.total += 10
           russian_roulette
